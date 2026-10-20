@@ -10,6 +10,8 @@
 	main/asyncapi/order_events.py
 [test_main_asyncapi_auto_inference]
 	main/asyncapi/user_events.py
+[test_main_asyncapi_avro_named_types]
+	main/asyncapi/main_asyncapi/avro_named_types.py
 [test_main_asyncapi_discriminator_state_isolated_per_document]
 	main/asyncapi/discriminator_state_isolation//*.py
 [test_main_asyncapi_dynamic_ref]
