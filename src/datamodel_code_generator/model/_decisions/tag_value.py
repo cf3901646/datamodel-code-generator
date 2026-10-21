@@ -13,7 +13,7 @@ passes that apply tags), ``parser/jsonschema.py`` (``_SchemaTagFacts`` behind
 The rows named ``legacy-*`` keep today's output where passes or backends disagree on a tag; the fix of each deletes
 its row (G05): ``legacy-value-of-any-kind`` (``FieldTagRule``), ``legacy-literal-only`` (``FieldTagSite``),
 ``legacy-python-equality`` (``TagIdentity``), ``legacy-any-key`` (``MappingPathRule``) and the rows in the docstrings
-of ``redeclared_tag_field``, ``tagged_union_discriminator`` and ``struct_tag_conflicts``.
+of ``redeclared_tag_field`` and ``tagged_union_discriminator``.
 """
 
 from __future__ import annotations
@@ -415,11 +415,10 @@ def tagged_union_discriminator(declared: object, /, *, literal_property: str) ->
 def struct_tag_conflicts(value: TagValue | None, mapped: Iterable[str], /) -> bool:
     """Return whether a variant cannot take ``value`` as its msgspec tag: it has none, or a key naming it differs.
 
-    Row ``legacy-raw-mapping-key``: the key is compared as written, so the tag ``1`` that an integer Enum member gives
-    the key ``"1"`` (``enum_tag_literal``) differs from it and the union stays untagged, while Pydantic writes
-    ``Literal[1]``.
+    A mapping key is a string, so it names the tag whose text it is, as ``Enum.find_member`` reads keys: the key
+    ``"1"`` names the tag ``1`` an integer Enum member gives it (``enum_tag_literal``), as for ``Literal[1]``.
     """
-    return value is None or any(key != value for key in mapped)
+    return value is None or any(key != str(value) for key in mapped)
 
 
 def struct_tag_clash(

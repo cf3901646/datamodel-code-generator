@@ -645,6 +645,17 @@ def test_main_openapi_discriminator_msgspec_inferred_property(output_file: Path,
     )
 
 
+def test_main_openapi_discriminator_msgspec_integer_mapping(output_file: Path) -> None:
+    """Tag msgspec variants by integer Enum members that the string mapping keys name."""
+    run_main_and_assert(
+        input_path=OPEN_API_DATA_PATH / "discriminator_msgspec_integer_mapping.yaml",
+        output_path=output_file,
+        input_file_type="openapi",
+        extra_args=["--output-model-type", "msgspec.Struct", "--use-msgspec-tagged-unions", "--disable-timestamp"],
+        force_exec_validation=True,
+    )
+
+
 def test_main_openapi_discriminator_enum_single_value_msgspec(output_file: Path) -> None:
     """Single-value enum discriminator is used as the msgspec tag."""
     run_main_and_assert(

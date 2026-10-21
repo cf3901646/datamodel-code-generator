@@ -980,6 +980,8 @@ shared-variants	main/openapi/discriminator/mapping_msgspec_untagged_default_warn
 [test_main_openapi_discriminator_msgspec_inferred_property]
 default	main/openapi/main_openapi/discriminator_msgspec_inferred_property[default].py
 tagged-unions	main/openapi/main_openapi/discriminator_msgspec_inferred_property[tagged-unions].py	= main/openapi/main_openapi/discriminator_msgspec_inferred_property[default].py
+[test_main_openapi_discriminator_msgspec_integer_mapping]
+	main/openapi/main_openapi/discriminator_msgspec_integer_mapping.py
 [test_main_openapi_discriminator_no_mapping]
 	main/openapi/discriminator/no_mapping.py
 [test_main_openapi_discriminator_no_mapping_no_subtypes]

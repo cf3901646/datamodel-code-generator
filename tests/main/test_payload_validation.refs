@@ -1204,6 +1204,8 @@ openapi/discriminator_mapping_msgspec_untagged.yaml::components.schemas.Dog	payl
 openapi/discriminator_mapping_msgspec_untagged.yaml::components.schemas.Square	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_msgspec_inferred_property.yaml::components.schemas.A	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_msgspec_inferred_property.yaml::components.schemas.B	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
+openapi/discriminator_msgspec_integer_mapping.yaml::components.schemas.Bar	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
+openapi/discriminator_msgspec_integer_mapping.yaml::components.schemas.Foo	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_msgspec_tagged_unions_base_earlier.yaml::components.schemas.Bird	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_msgspec_tagged_unions_base_earlier.yaml::components.schemas.Pet	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_msgspec_tagged_unions_base_later.yaml::components.schemas.Bird	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
@@ -2838,6 +2840,8 @@ openapi/discriminator_mapping_msgspec_untagged.yaml::components.schemas.Dog	payl
 openapi/discriminator_mapping_msgspec_untagged.yaml::components.schemas.Square	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_msgspec_inferred_property.yaml::components.schemas.A	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_msgspec_inferred_property.yaml::components.schemas.B	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
+openapi/discriminator_msgspec_integer_mapping.yaml::components.schemas.Bar	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
+openapi/discriminator_msgspec_integer_mapping.yaml::components.schemas.Foo	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_msgspec_tagged_unions_base_earlier.yaml::components.schemas.Bird	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_msgspec_tagged_unions_base_earlier.yaml::components.schemas.Pet	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_msgspec_tagged_unions_base_later.yaml::components.schemas.Bird	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
