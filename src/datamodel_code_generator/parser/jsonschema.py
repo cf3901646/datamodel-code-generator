@@ -1456,12 +1456,11 @@ def _is_object_only_type(type_: str | list[str] | None) -> bool:
 
 
 def _nullable_map_value_schema(obj: JsonSchemaObject) -> JsonSchemaObject | None:
-    """Return the additionalProperties schema of a type array that permits only null and objects."""
+    """Return the additionalProperties schema of a type array that lists object."""
     return (
         obj.additionalProperties
         if isinstance(obj.type, list)
         and "object" in obj.type
-        and not obj.has_multiple_types
         and isinstance(obj.additionalProperties, JsonSchemaObject)
         and "const" not in obj.extras
         else None
@@ -13207,18 +13206,20 @@ class JsonSchemaParser(Parser["JSONSchemaParserConfig", "JsonSchemaFeatures"]):
             return 0
 
         count = len(data_types)
-        data_types.extend(
-            self._parse_array_union_constrained_branch(
-                name,
-                obj,
-                path,
-                type_,
+        typed_values = self._typed_nullable_map_value_schema(obj)
+        for type_ in non_array_types:
+            if type_ == "object" and obj.is_object:
+                continue
+            typed_map = (
+                self._parse_nullable_map(name, obj, get_special_path("object", path), typed_values)
+                if type_ == "object" and typed_values is not None
+                else None
             )
-            if localize_constraints
-            else self._get_format_data_type(type_, obj.format or "default")
-            for type_ in non_array_types
-            if type_ != "object" or not obj.is_object
-        )
+            data_types.append(
+                self._parse_array_union_constrained_branch(name, obj, path, type_, typed_map)
+                if localize_constraints
+                else typed_map or self._get_format_data_type(type_, obj.format or "default")
+            )
         return len(data_types) - count
 
     def _should_localize_array_union_constraints(
