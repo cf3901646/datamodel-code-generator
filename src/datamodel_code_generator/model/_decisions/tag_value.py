@@ -400,15 +400,16 @@ def union_tag_values(
 def tagged_union_discriminator(declared: object, /, *, literal_property: str) -> dict[str, Any]:
     """Return the discriminator a union of msgspec Structs is captured with: by the property tagging every branch.
 
-    ``declared`` is the discriminator in the schema object's extras, whose other keys stay. Row
-    ``legacy-literal-property-replaces-declared``: the property replaces the one the schema's discriminator names, so
-    L5 tags the variants by it, or leaves them untagged when the declared mapping disagrees with its tags.
+    ``declared`` is the discriminator in the schema object's extras, whose other keys stay. The property replaces the
+    one the schema's discriminator names, and its ``mapping`` goes with the property it names, as its keys are values
+    of that property, not tags of the other (row ``legacy-literal-property-replaces-declared``: L5 then tags the
+    variants by their literals, never by the declared property).
     """
-    return (
-        {**declared, "propertyName": literal_property}
-        if isinstance(declared, dict)
-        else {"propertyName": literal_property}
-    )
+    if not isinstance(declared, dict):
+        return {"propertyName": literal_property}
+    if declared.get("propertyName") == literal_property:
+        return {**declared, "propertyName": literal_property}
+    return {key: value for key, value in declared.items() if key != "mapping"} | {"propertyName": literal_property}
 
 
 def struct_tag_conflicts(value: TagValue | None, mapped: Iterable[str], /) -> bool:
