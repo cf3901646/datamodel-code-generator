@@ -164,6 +164,7 @@ openapi/discriminator_collapsed_union_tags.yaml	yaml_fast_constructor/parity.txt
 openapi/discriminator_duplicate_value.yaml	yaml_fast_constructor/parity.txt
 openapi/discriminator_enum.yaml	yaml_fast_constructor/parity.txt
 openapi/discriminator_enum_duplicate.yaml	yaml_fast_constructor/parity.txt
+openapi/discriminator_enum_float_values.yaml	yaml_fast_constructor/parity.txt
 openapi/discriminator_enum_modules.yaml	yaml_fast_constructor/parity.txt
 openapi/discriminator_enum_sanitized.yaml	yaml_fast_constructor/parity.txt
 openapi/discriminator_enum_single_value.yaml	yaml_fast_constructor/parity.txt

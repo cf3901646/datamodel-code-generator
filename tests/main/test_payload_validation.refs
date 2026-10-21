@@ -234,6 +234,7 @@ jsonschema/discriminator_no_literal.json	payloads/native_numeric_empty_errors.tx
 jsonschema/discriminator_no_mapping.json	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 jsonschema/discriminator_tag_of_earlier_module/b.json	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 jsonschema/discriminator_tag_of_earlier_module/c.json	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
+jsonschema/discriminator_tag_value_kinds.json	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 jsonschema/discriminator_with_external_reference/inner_folder/artificial_folder/type-1.json	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 jsonschema/discriminator_with_external_reference/subfolder/type-5.json	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 jsonschema/discriminator_with_external_reference/type-4.json	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
@@ -1135,6 +1136,7 @@ openapi/discriminator_enum.yaml::components.schemas.RequestVersionEnum	payloads/
 openapi/discriminator_enum_duplicate.yaml::components.schemas.Cat	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_enum_duplicate.yaml::components.schemas.Dog	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_enum_duplicate.yaml::components.schemas.Lizard	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
+openapi/discriminator_enum_float_values.yaml::components.schemas.VersionEnum	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_enum_sanitized.yaml::components.schemas.RequestVersionEnum	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_enum_single_value.yaml::components.schemas.ToolType	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_enum_single_value_anyof.yaml::components.schemas.CustomToolCall	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
@@ -1878,6 +1880,7 @@ jsonschema/discriminator_no_literal.json	payloads/native_numeric_empty_errors.tx
 jsonschema/discriminator_no_mapping.json	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 jsonschema/discriminator_tag_of_earlier_module/b.json	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 jsonschema/discriminator_tag_of_earlier_module/c.json	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
+jsonschema/discriminator_tag_value_kinds.json	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 jsonschema/discriminator_with_external_reference/inner_folder/artificial_folder/type-1.json	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 jsonschema/discriminator_with_external_reference/subfolder/type-5.json	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 jsonschema/discriminator_with_external_reference/type-4.json	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
@@ -2771,6 +2774,7 @@ openapi/discriminator_enum.yaml::components.schemas.RequestVersionEnum	payloads/
 openapi/discriminator_enum_duplicate.yaml::components.schemas.Cat	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_enum_duplicate.yaml::components.schemas.Dog	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_enum_duplicate.yaml::components.schemas.Lizard	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
+openapi/discriminator_enum_float_values.yaml::components.schemas.VersionEnum	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_enum_sanitized.yaml::components.schemas.RequestVersionEnum	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_enum_single_value.yaml::components.schemas.ToolType	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
 openapi/discriminator_enum_single_value_anyof.yaml::components.schemas.CustomToolCall	payloads/native_numeric_empty_errors.txt	= main/jsonschema/nested_resources/no_warnings.txt
